@@ -1,7 +1,20 @@
 ﻿@page "/"
+@using StringDecorationContract.ViewModels
+@inject IIndexPageViewModel vm
 
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
+
+<h1>Input text</h1>
+<textarea @bind-value="@vm.InputText"
+          @bind-value:event="oninput"/>
+
+<br>
+
+<h2>Decorated text</h2>
+<div>
+    @vm.DecoratedText
+</div>
