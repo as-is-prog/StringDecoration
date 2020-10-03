@@ -16,5 +16,5 @@
   <ItemGroup>
     <ProjectReference Include="..\StringDecorationLib\StringDecorationLib.csproj" />
   </ItemGroup>
-
+  
 </Project>
