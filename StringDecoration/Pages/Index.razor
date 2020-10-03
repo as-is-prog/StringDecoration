@@ -8,11 +8,21 @@ Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
 
-<h1>Input text</h1>
+<h2>Input text</h2>
 <textarea @bind-value="@vm.InputText"
-          @bind-value:event="oninput"/>
+        @bind-value:event="oninput" />
 
 <br>
+
+<h2>Decorator select</h2>
+
+<select @bind="@vm.SelectedDecorateType">
+    @foreach (var dt in vm.SelectableDecorateType)
+    {
+        <option value="@dt">@dt.ToString()</option>
+    }
+</select>
+
 
 <h2>Decorated text</h2>
 <div>
