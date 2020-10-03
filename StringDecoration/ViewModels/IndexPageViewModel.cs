@@ -83,7 +83,12 @@ namespace StringDecoration.ViewModels
         /// </summary>
         private void OnDecorate()
         {
-            DecoratedText = Decorator.DecorateAll(InputText);
+            var decorated = Decorator.DecorateAll(InputText);
+
+
+            DecoratedText = string.IsNullOrWhiteSpace(decorated)
+                ? " "
+                : decorated;
         }
     }
 }

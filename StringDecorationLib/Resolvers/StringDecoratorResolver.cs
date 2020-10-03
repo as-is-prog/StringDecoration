@@ -12,6 +12,7 @@ namespace StringDecorationLib
                            = new Dictionary<DecorateType, IStringDecorator>
                              {
                                  { DecorateType.None, new NoneDecorator() },
+                                 { DecorateType.VoicedConsonantMarks, new VoicedConsonantMarksDecorator() },
                              };
 
         public static IStringDecorator Resolve(DecorateType decorateType)
@@ -20,7 +21,9 @@ namespace StringDecorationLib
 
             if (success) return decorator;
 
+            // このアサートがされる場合はおそらくDecoratorDictionaryへの追記漏れ
             Debug.Assert(false);
+
             // [異常系]
             // 登録されていないデコレータが指定された場合は
             // 何もしないデコレータを返す
