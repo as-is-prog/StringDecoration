@@ -10,13 +10,13 @@ namespace StringDecoratorLibTest.Decorators
         [DataRow("", "")]
         [DataRow(" ", " ")]
         [DataRow("0120-828-828", "０１２０ー８２８ー８２８")]
-        [DataRow("TESTABC", "ｔｅｓｔａｂｃ")]
+        [DataRow("TESTABC", "ＴＥＳＴＡＢＣ")]
         [DataRow("testabc", "ｔｅｓｔａｂｃ")]
         [DataRow("ﾃｽﾄｲﾛﾊ", "テストイロハ")]
-        [DataRow("!?/@~_:;{}", "！？／'＠〜＿：；｛｝")]
+        [DataRow("!?/@~_:;{}", "！？／＠〜＿：；｛｝")]
         public void TestDecorateAll(string input, string expectedOutput)
         {
-            var decorator = new StringConvertDecorator();
+            var decorator = new HalfWidthToFullWidthDecorator();
 
             var decoratedStr = decorator.DecorateAll(input);
 
