@@ -9,6 +9,10 @@
         /// <summary>
         /// 濁点
         /// </summary>
-        VoicedConsonantMarks
+        VoicedConsonantMarks,
+        ///<summary>
+        ///全角変換
+        ///</summaryh>
+        StringConvertDecorator
     }
 }
