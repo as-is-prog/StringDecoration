@@ -13,7 +13,7 @@ namespace StringDecorationLib
                              {
                                  { DecorateType.None, new NoneDecorator() },
                                  { DecorateType.VoicedConsonantMarks, new VoicedConsonantMarksDecorator() },
-                                 { DecorateType.StringConvertDecorator, new StringConvertDecorator() },
+                                 { DecorateType.HalfWidthToFullWidthDecorator, new HalfWidthToFullWidthDecorator() },
                              };
 
         public static IStringDecorator Resolve(DecorateType decorateType)

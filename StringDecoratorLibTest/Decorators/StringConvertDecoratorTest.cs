@@ -4,7 +4,7 @@ using StringDecorationLib.Decorators;
 namespace StringDecoratorLibTest.Decorators
 {
     [TestClass]
-    public class VoicedConsonantMarksDecoratorTest
+    public class StringConvertDecoratorTest
     {
         [DataTestMethod]
         [DataRow("", "")]
@@ -12,11 +12,11 @@ namespace StringDecoratorLibTest.Decorators
         [DataRow("0120-828-828", "０１２０ー８２８ー８２８")]
         [DataRow("TESTABC", "ｔｅｓｔａｂｃ")]
         [DataRow("testabc", "ｔｅｓｔａｂｃ")]
-        [DataRow("ﾃｽﾄｲﾛﾊ", "テストイロハ"")]
+        [DataRow("ﾃｽﾄｲﾛﾊ", "テストイロハ")]
         [DataRow("!?/@~_:;{}", "！？／'＠〜＿：；｛｝")]
         public void TestDecorateAll(string input, string expectedOutput)
         {
-            var decorator = new VoicedConsonantMarksDecorator();
+            var decorator = new StringConvertDecorator();
 
             var decoratedStr = decorator.DecorateAll(input);
 

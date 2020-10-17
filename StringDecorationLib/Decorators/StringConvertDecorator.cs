@@ -8,7 +8,7 @@ namespace StringDecorationLib.Decorators
     /// <summary>
     /// 全角にするデコレータ
     /// </summary>
-    internal class StringConvertDecorator : IStringDecorator
+    internal class HalfWidthToFullWidthDecorator : IStringDecorator
     {
 
         #region 定数

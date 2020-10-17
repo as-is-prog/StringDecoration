@@ -13,6 +13,6 @@
         ///<summary>
         ///全角変換
         ///</summaryh>
-        StringConvertDecorator
+        HalfWidthToFullWidthDecorator
     }
 }
